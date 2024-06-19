@@ -22,7 +22,6 @@ export const CartItem = ({ item }: Props) => {
 		return date.toLocaleDateString()
 	}
 
-	console.log(item)
 	return (
 		<Link href={item.link}>
 			<div className='relative bg-white border border-slate-100 rounded-2xl cursor-pointer hover:shadow-lg hover:-translate-y-1 transition'>
