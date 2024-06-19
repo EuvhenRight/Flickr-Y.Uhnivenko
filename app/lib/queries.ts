@@ -1,8 +1,8 @@
 'use client'
+import { AllPostData } from '@/app/lib/types/type'
 import { useEffect, useState } from 'react'
-import { AllPostData } from '../utils/type'
 
-export function GetDataPhoto() {
+export function GetData() {
 	const [data, setData] = useState<AllPostData>()
 	useEffect(() => {
 		const dataPhoto = async () => {

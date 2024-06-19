@@ -1,5 +1,5 @@
 'use client'
-import { ColorText } from '@/app/utils/coloredText'
+import { ColorText } from '@/app/lib/utils/coloredText'
 import Link from 'next/link'
 import { useEffect } from 'react'
 
@@ -10,7 +10,7 @@ export const Header = () => {
 	}, [])
 
 	return (
-		<header className='text-end bg-zinc-300 my-5 px-5'>
+		<header className='flex flex-col justify-between border-b border-slate-300 px-10 py-8'>
 			<Link href='/'>
 				<h1 id='flickr-app' className='text-5xl font-bold uppercase'></h1>
 			</Link>

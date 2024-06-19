@@ -1,21 +1,17 @@
 'use client'
-import { GetDataPhoto } from '@/app/hooks/getData'
-import { CartItem } from './components/ui/cart-item'
+import { useSearchData } from '@/app/lib/hooks/useSearchData'
+import { CardItemList } from './components/ui/card-item-list'
+import CustomInput from './components/ui/input'
 
 export default function Home() {
-	const data = GetDataPhoto()
-	console.log(data)
+	const data = useSearchData()
+
 	return (
-		<section className='container my-10'>
-			<div className='text-white'>
-				<ul>
-					{data?.items.map(item => (
-						<li key={item.link}>
-							<CartItem item={item} />
-						</li>
-					))}
-				</ul>
+		<section className='p-10'>
+			<div className='flex justify-end'>
+				<CustomInput />
 			</div>
+			<div>{data && <CardItemList data={data} />}</div>
 		</section>
 	)
 }

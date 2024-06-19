@@ -21,8 +21,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={lato.className}>
-				<Header />
-				<main>{children}</main>
+				<div className='bg-white container m-auto rounded-xl shadow-xl my-14'>
+					<Header />
+					<main>{children}</main>
+				</div>
 			</body>
 		</html>
 	)
