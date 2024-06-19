@@ -1,6 +1,5 @@
-import { PostData } from '@/app/lib/types/type'
-import { CartItem } from './card-item'
-
+import { CartItem } from '@/components/ui/card-item'
+import { PostData } from '@/lib/types/type'
 interface Props {
 	data: PostData
 }

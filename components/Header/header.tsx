@@ -1,5 +1,5 @@
 'use client'
-import { ColorText } from '@/app/lib/utils/coloredText'
+import { ColorText } from '@/lib/utils/coloredText'
 import Link from 'next/link'
 import { useEffect } from 'react'
 

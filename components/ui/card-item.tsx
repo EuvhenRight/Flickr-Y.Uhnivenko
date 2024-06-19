@@ -1,4 +1,4 @@
-import { PostItem } from '@/app/lib/types/type'
+import { PostItem } from '@/lib/types/type'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -39,9 +39,13 @@ export const CartItem = ({ item }: Props) => {
 						<p>{formattedTime(item.date_taken)}</p>
 						<p>{formattedDate(item.date_taken)}</p>
 					</div>
-					<p>{item.title}</p>
-					<p>{item.tags}</p>
-					<p className='italic text-end'>{extractAuthorName(item.author)}</p>
+					<p className='font-bold mx-2 text-clip overflow-hidden'>
+						{item.title}
+					</p>
+					<p className='text-sm text-clip overflow-hidden'>{item.tags}</p>
+					<p className='italic text-end text-sm'>
+						{extractAuthorName(item.author)}
+					</p>
 				</div>
 			</div>
 		</Link>

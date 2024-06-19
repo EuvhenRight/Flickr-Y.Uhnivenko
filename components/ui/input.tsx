@@ -3,8 +3,9 @@ import { Search } from 'lucide-react'
 interface Props {
 	searchValue: string
 	setSearchValue: (searchValue: string) => void
+	handleSearch: () => void
 }
-const CustomInput = ({ searchValue, setSearchValue }: Props) => {
+const CustomInput = ({ searchValue, setSearchValue, handleSearch }: Props) => {
 	return (
 		<>
 			<div className='relative mx-2'>
@@ -15,6 +16,7 @@ const CustomInput = ({ searchValue, setSearchValue }: Props) => {
 					value={searchValue}
 					onChange={e => setSearchValue(e.target.value)}
 					placeholder='Search'
+					onKeyDown={e => e.key === 'Enter' && handleSearch()}
 				/>
 			</div>
 		</>
