@@ -1,3 +1,5 @@
+// ADD ALL TYPES HERE
+
 export type AllPostData = {
 	data: PostData
 }
