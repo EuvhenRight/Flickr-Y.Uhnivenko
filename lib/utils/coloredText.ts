@@ -11,7 +11,7 @@ export function ColorText(elementId: string, text: string) {
 		'#FF4500', // Orange Red
 		'#4169E1', // Royal Blue
 	]
-	//DIFFERENT COLORS
+	//DIFFERENT COLORS FOR DIFFERENT LETTERS
 	const element = document.getElementById(elementId)
 	if (!element) return null
 	element.innerHTML = text

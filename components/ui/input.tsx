@@ -5,13 +5,13 @@ interface Props {
 	setSearchValue: (searchValue: string) => void
 	handleSearch: () => void
 }
-const CustomInput = ({ searchValue, setSearchValue, handleSearch }: Props) => {
+export const Input = ({ searchValue, setSearchValue, handleSearch }: Props) => {
 	return (
 		<>
-			<div className='relative mx-2'>
-				<Search className='absolute top-2.5 left-4' />
+			<div className='relative'>
+				<Search className='absolute top-3 left-4' />
 				<input
-					className='border rounded-xl py-2 pl-11 pr-4 outline-none focus:border-gray-400'
+					className='border rounded-lg py-2.5  pl-11 pr-5 outline-none w-full focus:border-gray-400'
 					type='text'
 					value={searchValue}
 					onChange={e => setSearchValue(e.target.value)}
@@ -22,5 +22,3 @@ const CustomInput = ({ searchValue, setSearchValue, handleSearch }: Props) => {
 		</>
 	)
 }
-
-export default CustomInput

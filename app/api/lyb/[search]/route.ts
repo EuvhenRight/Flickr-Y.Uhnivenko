@@ -12,7 +12,7 @@ export async function GET(
 	}
 
 	const response = await fetch(apiUrl + `&tags=${search}`, {
-		next: { revalidate: 30 },
+		next: { revalidate: 90 },
 	})
 
 	if (!response.ok) {

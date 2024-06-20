@@ -1,12 +1,11 @@
-import MainSearch from '@/components/MainSearchComponent/MainSearch'
-import { LoaderSkeleton } from '@/lib/utils/loaderSkeleton'
+import { SearchLogic } from '@/components/SearchLogic/searchLogic'
 import { Suspense } from 'react'
 
 export default function Home() {
 	return (
 		<>
-			<Suspense fallback={<LoaderSkeleton />}>
-				<MainSearch />
+			<Suspense>
+				<SearchLogic />
 			</Suspense>
 		</>
 	)

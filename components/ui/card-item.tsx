@@ -9,6 +9,7 @@ interface Props {
 export const CartItem = ({ item }: Props) => {
 	// FORMAT AUTHOR NAME
 	function extractAuthorName(author: string): string {
+		// EXTRACT AUTHOR NAME FROM STRING WITH REGEX WITHOUT EMAIL ADDRESS
 		const match = author.match(/\("([^"]*)"\)/)
 		return match ? match[1] : ''
 	}
@@ -39,10 +40,9 @@ export const CartItem = ({ item }: Props) => {
 						<p>{formattedTime(item.date_taken)}</p>
 						<p>{formattedDate(item.date_taken)}</p>
 					</div>
-					<p className='font-bold mx-2 text-clip overflow-hidden'>
+					<p className='font-bold my-2 text-clip overflow-hidden'>
 						{item.title}
 					</p>
-					<p className='text-sm text-clip overflow-hidden'>{item.tags}</p>
 					<p className='italic text-end text-sm'>
 						{extractAuthorName(item.author)}
 					</p>

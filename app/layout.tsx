@@ -1,4 +1,5 @@
 import '@/app/globals.css'
+import { Footer } from '@/components/Footer/footer'
 import { Header } from '@/components/Header/header'
 import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
@@ -22,8 +23,11 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={lato.className}>
 				<div className='bg-white container m-auto rounded-xl shadow-xl my-14'>
+					{/* HEADER */}
 					<Header />
 					<main>{children}</main>
+					{/* FOOTER */}
+					<Footer />
 				</div>
 			</body>
 		</html>
