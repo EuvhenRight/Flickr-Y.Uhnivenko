@@ -7,7 +7,7 @@ import { LoaderSkeleton } from '@/lib/utils/loaderSkeleton'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
-export const SearchLogic = () => {
+export const SearchBlock = () => {
 	// VALUE FROM SEARCH PARAMS
 	const [searchValue, setSearchValue] = useState('')
 	const searchParams = useSearchParams()
@@ -32,7 +32,7 @@ export const SearchLogic = () => {
 	}
 
 	return (
-		<section className='p-10'>
+		<section className='p-2 sm:p-10'>
 			<div className='flex flex-col md:flex-row justify-between lg:items-center'>
 				<p className='py-2'>
 					Results: <b>{data?.title}</b>

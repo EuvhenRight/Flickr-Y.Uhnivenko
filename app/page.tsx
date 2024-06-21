@@ -1,11 +1,11 @@
-import { SearchLogic } from '@/components/SearchLogic/searchLogic'
+import { SearchBlock } from '@/components/SearchLogic/searchBlock'
 import { Suspense } from 'react'
 
 export default function Home() {
 	return (
 		<>
 			<Suspense>
-				<SearchLogic />
+				<SearchBlock />
 			</Suspense>
 		</>
 	)
